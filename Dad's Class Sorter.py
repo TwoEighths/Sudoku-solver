@@ -9,9 +9,8 @@ anyone share a group with a particular person more than once. He
 suggested there might be 4 such configurations that I could find
 and he would simply repeat them over and over.
 
-I took a more optimized approach. After cycling through the four
-different configurations, you'd end up seeing exactly the same
-faces in exactly the same groups. Instead, I give each student
+It turns out that 4 configurations are not always guaranteed.
+So, to minimize repeated pairs, I give each student
 a "pairing history," which is easiest to record in an Array
 with both axes corresponding to the same list of all the
 students. For example, if student 8 appears in the same group
@@ -23,18 +22,6 @@ each student from that list and adding it to the group with
 the lowest PotentialClashes (pairing history values from the
 HistoryArray). Evens and Odds ensure that groups are as
 close in size as possible.
-
-Uncertainties at this point include the fact that the HistoryArray
-(shown in a print statement) demonstrates, in some configurations,
-the extreme unwillingness of some students to pair with others, giving
-low values in the HistoryArray. (I'm aware of, and not counting, the
-nonsensical cases where a student pairs with themselves, which I've defaulted
-to zero.) Also, although the HistoryArray obviously needs to carry over
-from one configuration to the next (or it wouldn't be much of a history),
-I am experimenting with reducing the impact of each one as it fades
-further and further into the past. (It's OK if one or two pairings
-happen twice in 5 turns.) Right now this means simply multiplying by
-0.5, but any better ideas are welcome.
 
 Works cited: https://www.jstor.org/stable/822823?seq=1#page_scan_tab_contents
 
